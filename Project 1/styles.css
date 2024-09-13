@@ -1,6 +1,5 @@
 body {
     font-family: Georgia;
-    font-size: 120%;
 }
 
 h1 {
@@ -11,4 +10,8 @@ h2 {
     text-align: center;
     font-weight: lighter;
     font-style: italic;
+}
+
+p {
+    font-size: 110%;
 }
