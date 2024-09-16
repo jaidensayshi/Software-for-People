@@ -26,11 +26,12 @@ uL {
     height: 250px;
     border-style: solid;
     border-color: lightslategray;
+    text-align: center;
 }
 
 .book-image {
-    display: block;
+    /*display: block;
     margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+    margin-right: auto;*/
+    width: 100%; /*90%;*/
 }
