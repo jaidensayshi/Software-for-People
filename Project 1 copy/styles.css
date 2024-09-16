@@ -27,3 +27,10 @@ uL {
     border-style: solid;
     border-color: lightslategray;
 }
+
+.book-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
