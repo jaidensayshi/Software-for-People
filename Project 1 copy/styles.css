@@ -1,3 +1,7 @@
+:root {
+    --book-width: 180px;
+}
+
 body {
     font-family: Georgia;
 }
@@ -22,11 +26,12 @@ uL {
 
 .book {
     display: inline-block;
-    width: 180px;
+    width: var(--book-width);
     height: 230px;
     border-style: solid;
     border-color: lightslategray;
     text-align: center;
+    background-color: rgb(219, 208, 225); 
 }
 
 .book-image {
@@ -34,5 +39,5 @@ uL {
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
-    height: 180px;
+    height: var(--book-width);
 }
