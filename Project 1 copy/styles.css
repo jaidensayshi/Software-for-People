@@ -4,6 +4,7 @@
 
 body {
     font-family: Georgia;
+    background-color: rgb(219, 208, 225); 
 }
 
 h1 {
@@ -31,7 +32,7 @@ uL {
     border-style: solid;
     border-color: lightslategray;
     text-align: center;
-    background-color: rgb(219, 208, 225); 
+    background-color: lightgray;
 }
 
 .book-image {
