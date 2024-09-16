@@ -1,0 +1,29 @@
+body {
+    font-family: Georgia;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+p {
+    font-size: 110%;
+}
+
+uL {
+    line-height: 130%;
+}
+
+.book {
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: lightslategray;
+}
