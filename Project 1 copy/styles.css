@@ -17,22 +17,27 @@ h2 {
     font-style: italic;
 }
 
-p {
+.text {
     font-size: 110%;
+    margin-left: 20px;
 }
 
 uL {
     line-height: 130%;
 }
 
+.book-container {
+    display: flex;
+}
+
 .book {
-    display: inline-block;
     width: var(--book-width);
     height: 230px;
     border-style: solid;
     border-color: lightslategray;
     text-align: center;
     background-color: white;
+    margin: 5px;
 }
 
 .book-image {
@@ -42,3 +47,16 @@ uL {
     display: inline-block;
     height: var(--book-width);
 }
+
+.text-container {
+    display: flex;
+    margin-right: 50px;
+}
+
+.info-box {
+    border-color: lightslategray;
+    border-style: solid;
+    margin-left: 10px;
+    /*width: var(--book-width);*/
+}
+
