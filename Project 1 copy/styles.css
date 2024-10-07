@@ -2,9 +2,19 @@
     --book-width: 180px;
 }
 
+@font-face {
+    font-family: ATWriter;
+    src: url(Images/atwriter.ttf);
+}
+
 body {
-    font-family: Georgia;
-    background-color: rgb(219, 208, 225); 
+    font-family: ATWriter, Georgia;
+    background-color: rgb(41, 37, 45); 
+    color: rgb(170, 123, 51);
+}
+
+a {
+    color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -28,15 +38,16 @@ uL {
 
 .book-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book {
     width: var(--book-width);
     height: 230px;
     border-style: solid;
-    border-color: lightslategray;
+    color: rgb(170, 123, 51);
     text-align: center;
-    background-color: white;
+    background-color: rgb(75, 68, 83); 
     margin: 5px;
 }
 
