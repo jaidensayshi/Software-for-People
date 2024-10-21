@@ -49,8 +49,8 @@ uL {
 }
 
 .book {
-    width: var(--book-width);
-    height: 230px;
+    /*width: var(--book-width);*/
+    /*height: 230px;*/
     border-style: solid;
     color: rgb(170, 123, 51);
     text-align: center;
@@ -63,7 +63,7 @@ uL {
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
-    height: var(--book-width);
+    /*height: var(--book-width);*/
     padding-left: 7px;
     padding-right: 7px;
     padding-top: 7px;
