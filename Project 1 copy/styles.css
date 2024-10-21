@@ -1,7 +1,3 @@
-:root {
-    --book-width: 180px;
-}
-
 @font-face {
     font-family: ATWriter;
     src: url(images/atwriter.ttf);
