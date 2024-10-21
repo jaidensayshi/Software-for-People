@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="styles.css">
     <title>A Child's Treasury of Golden Afternoons</title>
 </head>
-<body>
-    <h1><a href="index.html">Hush House Library</a></h1>
-    <h2>Books are the memory that does not die.</h2>
-    <h3>A Child's Treasury of Golden Afternoons</h3>
-
-    <div class="text-container">
-        <img src="images/AChildsTreasuryofGoldenAfternoons.webp" class="book-image" alt="A yellow book with the symbol of Skolekosophy on its cover.">
-        <div class="info-box">
-            <div><b>Language:</b> Hyksos</div>
-            <div><b>Period:</b> Baronial</div>
-            <div><b>Mystery:</b> Edge 10</div>
-            <div><b>Skill:</b> Sharps</div>
-            <div><b>Memory:</b> <i>Numen:</i> Merciless Alteration</div>
-        </div>
-        <div class="text">
-            <div>Once upon a time, a very bad man encoded very bad secrets into the charming illustrations of a book of charming stories. Wake the pictures, and you will see. [This book houses a numen - a truth so powerful it can perhaps believe itself.]</div>
-            <p>Lord Jacob Gristwood: surgeon, ethnologist, philanthropist. There is no proof that he ever kept children in hutches beneath his bed. There is no proof he vivisected cats at dinner with his pen-knife. The Suppression Bureau keeps its secrets.</p>
-            <p>Here is your paint,' whispered the Wolf to the Pale Girl. 'Here is your knife-for-scraping. And here is your face.</p>
-        </div>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png')";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/AChildsTreasuryofGoldenAfternoons.webp')">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">A Child's Treasury of Golden Afternoons</span>
+            <br><br>Once upon a time, a very bad man encoded very bad secrets into the charming illustrations of a book of charming stories. Wake the pictures, and you will see. [This book houses a numen - a truth so powerful it can perhaps believe itself.]
+            <br><br>Lord Jacob Gristwood: surgeon, ethnologist, philanthropist. There is no proof that he ever kept children in hutches beneath his bed. There is no proof he vivisected cats at dinner with his pen-knife. The Suppression Bureau keeps its secrets.
+            <br><br>Here is your paint,' whispered the Wolf to the Pale Girl. 'Here is your knife-for-scraping. And here is your face.
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
     </div>
 </body>
 </html>

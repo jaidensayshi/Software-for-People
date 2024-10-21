@@ -6,25 +6,26 @@
     <link rel="stylesheet" href="styles.css">
     <title>Chione at Abydos</title>
 </head>
-<body>
-    <h1><a href="index.html">Hush House Library</a></h1>
-    <h2>Books are the memory that does not die.</h2>
-    <h3>Chione at Abydos</h3>
-
-    <div class="text-container">
-        <div>
-        <img src="images/Chione_at_Abydos.webp" class="book-image" alt="A pale blue book with the abbreviation CaA and a woman's silhouette on the cover.">
-            <div class="info-box">
-                <div><b>Language:</b> English</div>
-                <div><b>Period:</b> Baronial</div>
-                <div><b>Mystery:</b> Winter 6</div>
-                <div><b>Skill:</b> Snow Stories</div>
-                <div><b>Memory:</b> Regret</div>
-            </div>
-        </div>
-        <div class="text">A play dealing with the nine-year sojourn of a snow-goddess in the Thracian city of Abydos, by 'Apollo Fireweaver'. In English, published in 1892; purportedly from an older Greek text.</div>
-        <div class="text">The entity called 'Chione' arrives in a blizzard and demands the city gates are barred. As Abydos falls under her spell, the dead return, but do not speak...</div>
-        <div class="text"> For eight years the city is a place of slow death, frosty ecstacy and silent beauty, but in the ninth year a Conspiracy of Shouts is mounted against the quiet that Chione demands. The conspirators open the city gates, and a scarred man comes to drag Chione out by the hair. Summer returns, but the conspirators die of remorse.</div>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png')";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/Chione_at_Abydos.webp')">
+        <!--<img src="images/Chione_at_Abydos.webp" class="cover" id="closedbook" onclick="changeImage()"/>-->
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">Chione at Abydos</span>
+            <br><br>A play dealing with the nine-year sojourn of a snow-goddess in the Thracian city of Abydos, by 'Apollo Fireweaver'. In English, published in 1892; purportedly from an older Greek text.
+            <br><br>The entity called 'Chione' arrives in a blizzard and demands the city gates are barred. As Abydos falls under her spell, the dead return, but do not speak...
+            <br><br>For eight years the city is a place of slow death, frosty ecstacy and silent beauty, but in the ninth year a Conspiracy of Shouts is mounted against the quiet that Chione demands. The conspirators open the city gates, and a scarred man comes to drag Chione out by the hair. Summer returns, but the conspirators die of remorse.
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
     </div>
 </body>
 </html>

@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="styles.css">
     <title>What Does Not Bark</title>
 </head>
-<body>
-    <h1><a href="index.html">Hush House Library</a></h1>
-    <h2>Books are the memory that does not die.</h2>
-    <h3>What Does Not Bark</h3>
-
-    <div class="text-container">
-        <img src="images/WhatDoesNotBark.webp" class="book-image" alt="A pale purple book with the letters WD NB on the cover.">
-        <div class="info-box">
-            <div><b>Language:</b> English</div>
-            <div><b>Period:</b> Baronial</div>
-            <div><b>Mystery:</b> Moon 4</div>
-            <div><b>Skill:</b> Edicts Inviolable</div>
-            <div><b>Memory:</b> Storm</div>
-        </div>
-        <div class="text">
-            <div>Alexander Probst writes warily of 'Calyptra' - a law, principle or society which prevents the dissemination of dangerous knowledge.</div>
-            <p>'Calyptra, like the planet that occludes the star, or the Doylian dog that fails to bark, can be identified only by its absence. Even the name, I think, must be a mask…'</p>
-            <p>'Calyptra is said to make exceptions specifically for the libraries of the Watchman's Tree. Does it make those exceptions so the Hours can make use of them?'</p>
-        </div>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png'); width: 478px";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/WhatDoesNotBark.webp'); width: 478px">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">What Does Not Bark</span>
+            <br><br>Alexander Probst writes warily of 'Calyptra' - a law, principle or society which prevents the dissemination of dangerous knowledge.
+            <br><br>'Calyptra, like the planet that occludes the star, or the Doylian dog that fails to bark, can be identified only by its absence. Even the name, I think, must be a mask…'
+            <br><br>'Calyptra is said to make exceptions specifically for the libraries of the Watchman's Tree. Does it make those exceptions so the Hours can make use of them?'
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
     </div>
 </body>
 </html>

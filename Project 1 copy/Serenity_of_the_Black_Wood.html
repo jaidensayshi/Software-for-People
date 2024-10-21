@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="styles.css">
     <title>The Serenity of the Black Wood</title>
 </head>
-<body>
-    <h1><a href="index.html">Hush House Library</a></h1>
-    <h2>Books are the memory that does not die.</h2>
-    <h3>The Serenity of the Black Wood</h3>
-
-    <div class="text-container">
-        <img src="images/TheSerenityoftheBlackWood.webp" class="book-image" alt="A pale yellow book with the letters S ot BW on the cover.">
-        <div class="info-box">
-            <div><b>Language:</b> Greek</div>
-            <div><b>Period:</b> Solar Gothic</div>
-            <div><b>Mystery:</b> Moth 12</div>
-            <div><b>Skill:</b> Sacra Limiae</div>
-            <div><b>Memory:</b> Confounding Parable</div>
-        </div>
-        <div class="text">
-            <div>An allegorical history of the House of Lethe, which it is here implied was inspired by the Centipede. 'Sereno Blackwood' is an occult alias to this day.</div>
-            <p>'The Proverbial Footloose' gathers travellers in a wood, and leads them through, but abandons them part-way. They find themselves beset by 'glorious monsters'.</p>
-            <p>The travellers discover they can survive if they close their eyes (they adopt a closed eye as their sign) and that they can go unnoticed if they drink from the clear cold streams. They never forget 'that proverbial footloose, the Centipede' but they never forgive her either.</p>
-        </div>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png'); width: 462px";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/TheSerenityoftheBlackWood.webp'); width: 462px">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">The Serenity of the Black Wood</span>
+            <br><br>An allegorical history of the House of Lethe, which it is here implied was inspired by the Centipede. 'Sereno Blackwood' is an occult alias to this day.
+            <br><br>'The Proverbial Footloose' gathers travellers in a wood, and leads them through, but abandons them part-way. They find themselves beset by 'glorious monsters'.
+            <br><br>The travellers discover they can survive if they close their eyes (they adopt a closed eye as their sign) and that they can go unnoticed if they drink from the clear cold streams. They never forget 'that proverbial footloose, the Centipede' but they never forgive her either.
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
     </div>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to Hush House!</title>
+</head>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png'); width: 529px";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/Sand-Scarred_Journal.webp'); width: 529px">
+        <!--<img src="images/Chione_at_Abydos.webp" class="cover" id="closedbook" onclick="changeImage()"/>-->
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">Welcome to Hush House!</span>
+            <br><br><i>Books are the memory that does not die.</i>
+            <br><br>Hush House is a library with a long and storied history, one of only nine libraries where mortals are permitted to study forbidden texts. (Of course, mortals have found ways to study such texts outside of these libraries, but Hush House's importance remains).
+            <br><br>This House is the centerpiece of <a href="https://weatherfactory.biz">Weather Factory</a>'s game Book of Hours, which I absolutely adore. Collected here is a selection of books from that game; those which I found particularly interesting or which I used frequently while playing.
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
+    </div>
+</body>
+</html>

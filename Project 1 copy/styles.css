@@ -11,10 +11,12 @@ body {
     font-family: ATWriter, Georgia;
     background-color: rgb(41, 37, 45); 
     color: rgb(170, 123, 51);
+    background-size: 100%;
+    background-image: url("images/library.png");
 }
 
 a {
-    color: rgb(255, 255, 255);
+    color: grey;
 }
 
 h1 {
@@ -38,7 +40,11 @@ uL {
 
 .book-container {
     display: flex;
-    flex-wrap: wrap;
+    border-style: solid;
+    border-color: rgb(84, 34, 51);
+    border-width: 20px;
+    background-color: rgb(49, 20, 39);
+    justify-content: space-around;
 }
 
 .book {
@@ -57,6 +63,15 @@ uL {
     margin-right: auto;
     display: inline-block;
     height: var(--book-width);
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+    opacity: 60%;
+    transition: 1s;
+}
+
+.book-image:hover {
+    opacity: 100%;
 }
 
 .text-container {
@@ -69,5 +84,46 @@ uL {
     border-style: solid;
     margin-left: 10px;
     /*width: var(--book-width);*/
+}
+
+.cover-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 630px;
+    width: 560px; 
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center; 
+    border-radius: 5%;
+}
+
+.book-text {
+    color: rgb(57, 57, 57);
+    opacity: 0%;
+    margin: 25px;
+    font-size: 110%;
+}
+
+.page-number {
+    color: black;
+    font-size: 90%;
+    position: absolute;
+    top: 93%;
+    left: 93%;
+    
+}
+
+.left-text {
+    color: black;
+    font-size: 90%;
+    position: absolute;
+    top: 93%;
+    left: 25px;
+}
+
+.book-body {
+    background-image: url(images/library.png)"
 }
 
