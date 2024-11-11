@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="valor.css" id="style">
+    <title>Valor Parlor</title>
+</head>
+<body onload="onload();">
+    <h1>Valor Parlor</h1>
+    <div>Your balance: <span id="balance">0</span></div>
+    <br>
+    <label for="valor">Deposit/Debit:</label>
+    <input type="number" id="value" name="fname"><br>
+    <input type="button" name="button" value="Deposit" onclick="updateBalance(true);">
+    <input type="button" name="button" value="Debit" onclick="updateBalance(false);">
+    <br>
+    <input type="button" name="button" value="Item 1" onclick="change();">
+
+    <div class="display">
+        <img src="images/valor/model.png" class="model" width="100%">
+        <img src="images/valor/1.png" class="clothes" width="100%" id="1">
+    </div>
+
+    <script>
+        var balanceNum = 1;
+        var balanceText;
+        var value;
+        function change() {
+            var target = document.getElementById("1");
+            if(target.style.opacity == 0) target.style.opacity = 100;
+            else target.style.opacity = 0;
+        }
+        function onload() {
+            balanceText = document.getElementById("balance");
+            value = document.getElementById("value");
+        }
+        function updateBalance(valor) {
+            if(valor) balanceNum = +balanceNum + +value.value; 
+            else balanceNum = +balanceNum - +value.value;
+            balanceText.innerHTML = balanceNum;
+            if(+balanceNum > 0) {
+                document.getElementById("style").setAttribute("href", "valor.css");
+                const clothes = document.querySelectorAll(".clothes");
+                for(let i = 0; i < clothes.length; i++)
+                {
+                    console.log(clothes[i].src);
+                    clothes[i].src = "images/valor/" + clothes[i].id + ".png";
+                    console.log(clothes[i].src);
+                }
+            }
+            else if(+balanceNum < 0) {
+                document.getElementById("style").setAttribute("href", "caenum.css");
+                const clothes = document.querySelectorAll(".clothes");
+                for(let i = 0; i < clothes.length; i++)
+                {
+                    console.log(clothes[i].src);
+                    clothes[i].src = "images/caenum/" + clothes[i].id + ".png";
+                    console.log(clothes[i].src);
+                }
+            }
+            else {
+                document.getElementById("style").setAttribute("href", "zero.css");
+            }
+        }
+    </script>
+</body>
+</html>
