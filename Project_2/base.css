@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Manstein;
+    src: url(images/Manstein.ttf);
+}
+
+.display {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vw;
+}
+
+.model {
+    position: absolute;
+    z-index: 1;
+}
+
+.clothes {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+.choice {
+    opacity: 50%;
+    width: 25vw; 
+    text-align: center;
+    border-width: 5px;
+    border-style: solid;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.mica {
+    width: 10vw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+input[type=number] {
+    width: 104px;
+    height: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.changeContainer {
+    position: relative;
+    z-index: 1;
+}
+
+.bigContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dbutton {
+    border-style: inset;
+    border-radius: 4px;
+    border-color: grey;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+#deposit {
+    background-color: white;
+    color: rgb(64, 64, 64);
+}
+
+#debit {
+    background-color: black;
+    color: white;
+}
+
+.balance {
+    background-color: white;
+    width: 40%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    color: grey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#balance {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: Manstein, cursive;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+#text {
+    z-index: 1;
+    position: relative;
+    width: 60%;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+}

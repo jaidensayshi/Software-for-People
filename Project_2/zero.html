@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css"> 
+    <link rel="stylesheet" href="valor.css"> 
+    <title>Valor Parlor</title>
+</head>
+<body>
+    <h1>Valor Parlor</h1>
+    <br>
+    Congratulations on breaking even!
+    <br>Pardon our appearance while this page is under construction.
+    <br><br>Continue earning valor to try out abacus styles!
+    <br>
+    <div class="bigContainer">
+        <span class="changeContainer">
+            <input type="number" min="0" step="1" placeholder="Enter value..." oninput="validity.valid||(value='');" id="value" name="fname">
+            <br>
+            <input type="button" name="button" value="Deposit" class="dbutton" id="deposit" onclick="updateBalance(true);">
+            <input type="button" name="button" value="Debit" class="dbutton" id="debit" onclick="updateBalance(false);">
+        </span>
+    <br>
+    <script src="zero.js"></script>
+</body>
+</html>
