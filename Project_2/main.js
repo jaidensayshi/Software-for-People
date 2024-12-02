@@ -74,11 +74,13 @@ if (balanceNum < 0) valorous = false;
 var availBalance = Math.abs(balanceNum);
 var balanceText = document.getElementById("balance");
 var value = document.getElementById("value");
+var text = document.getElementById("text");
 balanceText.innerHTML = balanceNum;
 
 
 var choices = document.querySelectorAll(".choice");
 var buttons = document.querySelectorAll(".btnImg");
+var prices = document.querySelectorAll(".price");
 var items = [];
 // for each accessory option
 for(let i = 0; i < choices.length; i++) {
@@ -95,6 +97,10 @@ if(!valorous) {
     buttons.forEach(button => {
         button.src = "images/caenum/" + button.id + ".png";
     })
+    prices.forEach(price => {
+        price.innerHTML = "caenum";
+    })
+    text.innerHTML = "Earn valor to try valorous abacus styles, or choose an abacus to display your caenum."
 }
 
 var micas = document.querySelectorAll(".mica");
@@ -108,30 +114,43 @@ function randomMica() {
         mica.style.filter = "hue-rotate(" + (Math.floor(Math.random() * 90) - 20) + "deg)";
     })
 }
-/*
-var valorPrompts = [
-    "Make a deposit to start playing!",
-    "<img src='images/Everett-Micky.png'>",
-    "<img src='images/Lark.png'>",
-    "<img src='images/Merlin.png'>",
-    "<img src='images/Mother-Artifice.png'>",
-    "<img src='images/Phineas.png'>",
-    "<img src='images/The-Bocular-Man.png'>",
-    "<img src='images/Weepe.png'>",
-]
 
-var caenumPrompts = [
-    "<img src='images/Cleophee.png'>",
-    "<img src='images/Everett-Micky.png'>",
-    "<img src='images/Lark.png'>",
-    "<img src='images/Merlin.png'>",
-    "<img src='images/Mother-Artifice.png'>",
-    "<img src='images/Phineas.png'>",
-    "<img src='images/The-Bocular-Man.png'>",
-    "<img src='images/Weepe.png'>",
-]*/
 
 randomMica();
+
+
+var valorDeposit = [
+    "Keep up the great work, citizen!",
+    "At this rate, you'll be the next Maximillian Loxlee!",
+    "You should be proud of your impressive balance!",
+]
+
+var valorDebit = [
+    "Uh oh! You'll need to work hard to balance that out.",
+    "Be careful not to fall too far.",
+]
+
+var caenumDeposit = [
+    "Progress! Just keep contributing and you'll break even soon.",
+    "There we go! You're improving.",
+]
+
+var caenumDebit = [
+    "If you just worked a little harder you could be a good member of society.",
+    "We're all rooting for you - when will you get your act together?",
+]
+
+function textUpdate(valor) {
+    if(valorous && valor) { // if valorous and +valor
+        text.innerHTML = valorDeposit[Math.floor(Math.random() * valorDeposit.length)]
+    } else if (valorous) { // if valorous and -valor
+        text.innerHTML = valorDebit[Math.floor(Math.random() * valorDebit.length)]
+    } else if (valor) { // if caenumous and +valor
+        text.innerHTML = caenumDeposit[Math.floor(Math.random() * caenumDeposit.length)]
+    } else { // if caenumous and -valor
+        text.innerHTML = caenumDebit[Math.floor(Math.random() * caenumDebit.length)]
+    }
+}
 
 function updateBalance(valor) {
     // update balance: 
@@ -163,16 +182,20 @@ function updateBalance(valor) {
         buttons.forEach(button => {
             button.src = "images/caenum/" + button.id + ".png";
         })
+        prices.forEach(price => {
+            price.innerHTML = "caenum";
+        })
         // nothing is selected, so availableBalance = |balance|
         availBalance = Math.abs(+balanceNum);
         valorous = false;
+        text.innerHTML = "How disappointing! You used to be a good person."
     } 
     // if flipped to valor
     else if(valorous == false && +balanceNum > 0) {
         // change style sheet
         document.getElementById("style").setAttribute("href", "valor.css");
         document.getElementById("model").src = "images/valor/model.png";
-        // change all images to caenum and turn them off
+        // change all images to valor and turn them off
         items.forEach(item => {
             item.turnOff();
             item.img.src= "images/valor/" + item.id + ".png";
@@ -180,10 +203,14 @@ function updateBalance(valor) {
         buttons.forEach(button => {
             button.src = "images/valor/" + button.id + ".png";
         })
+        prices.forEach(price => {
+            price.innerHTML = "valor";
+        })
         // nothing is selected, so availableBalance = |balance|
         availBalance = Math.abs(+balanceNum);
         valorous = true;
         randomMica();
+        text.innerHTML = "Congratulations! All you had to do was put your mind to it."
     } 
     // if no change in state
     else {
@@ -208,6 +235,6 @@ function updateBalance(valor) {
                 availBalance = Math.abs(balanceNum);
             })
         }
-        
+        textUpdate(valor);
     }
 }

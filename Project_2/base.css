@@ -65,6 +65,11 @@ input[type=number] {
     justify-content: space-between;
 }
 
+.zeroContainer {
+    margin: auto;
+    text-align: center;
+}
+
 .dbutton {
     border-style: inset;
     border-radius: 4px;
@@ -118,4 +123,19 @@ h1 {
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 2px;
+}
+
+.zeroText {
+    padding: 5px;
+    color: rgb(100, 45, 103);
+    position: relative;
+    z-index: 1;
+    background: rgb(253, 236, 255);
+
+}
+
+#trust {
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
 }
