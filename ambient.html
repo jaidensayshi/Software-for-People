@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Website</title>
+
+    <style>
+        body {
+            animation: background 15s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @keyframes background {
+            0% {
+                background-color: rgb(47, 47, 82);
+            }
+            50% {
+                background-color: rgb(39, 12, 52);
+            }
+            100% {
+                background-color: rgb(47, 47, 82);
+            }
+        }
+
+        .star_5 {
+            position: relative;
+            width: 0px;
+            height: 0px;
+            display: block;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid white;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+            filter: blur(2px);
+            opacity: 80%;
+        }
+
+        .star_5:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: -45px;
+            left: -65px;
+            border-bottom: 80px solid white;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            height: 0;
+            width: 0;
+            transform: rotate(-35deg);
+        }
+
+        .star_5:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid white;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+        }
+
+        .s1 {
+            animation: s1 5s ease infinite;
+        }
+
+        @keyframes s1 {
+            0% {
+                rotate: 0deg;
+                top: 100px;
+            }
+            50% {
+                rotate: 180deg;
+                top: 400px;
+            }
+            100% {
+                rotate: 360deg;
+                top: 100px;
+            }
+        }
+
+        .s2 {
+            animation: s2 6s linear infinite;
+        }
+
+        @keyframes s2 {
+            0% {
+                top: 400px;
+                rotate: -10deg;
+            }
+            50% {
+                top: 100px;
+                rotate: 10deg;
+            }
+            100% {
+                top: 400px;
+                rotate: -10deg;
+            }
+        }
+
+        .s3 {
+            top: 300px;
+            animation: s3 4s linear infinite;
+        }
+
+        @keyframes s3 {
+            0% {
+                rotate: 0deg;
+            }
+            50% {
+                rotate: 180deg;
+            }
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        .s4 {
+            animation: s4 7s linear infinite;
+        }
+
+        @keyframes s4 {
+            0% {
+                top: 100px;
+                rotate: 10deg;
+            }
+            50% {
+                top: 400px;
+                rotate: -10deg;
+            }
+            100% {
+                top: 100px;
+                rotate: 10deg;
+            }
+        }
+
+        .s5 {
+            animation: s5 6s ease infinite;
+        }
+
+        @keyframes s5 {
+            0% {
+                rotate: 0deg;
+                top: 400px;
+            }
+            50% {
+                rotate: -180deg;
+                top: 100px;
+            }
+            100% {
+                rotate: -360deg;
+                top: 400px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="star_5 s1"></div>
+    <div class="star_5 s2"></div>
+    <div class="star_5 s3"></div>
+    <div class="star_5 s4"></div>
+    <div class="star_5 s5"></div>
+
+</body>
+</html>
