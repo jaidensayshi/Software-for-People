@@ -26,7 +26,8 @@ function handleData(response) {
 
   response.forEach(function(item) {
     // Create a new <li> element
-    var listItem = document.createElement("li");
+    var listItem = document.createElement("div");
+    listItem.className = "item";
 
     // Iterate over the keys of the object
     Object.keys(item).forEach(function(key) {
@@ -34,6 +35,10 @@ function handleData(response) {
       var divKeyValue = document.createElement("div");
       // Set class name as the key
       divKeyValue.className = key;
+      if (key == "image") {
+        divKeyValue.innerHTML = "<img src='" + item[key] + "' style='height: 200px'>"
+      }
+      else if (key == "name")
       // Set innerHTML as the value
       divKeyValue.innerHTML = item[key];
       // Append the <div> element for the key-value pair to the <li> item

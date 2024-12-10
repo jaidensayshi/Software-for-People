@@ -4,17 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art 369: Software for People</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: slategray;
+        }
+
+        a {
+            color: rgb(36, 30, 104);
+            opacity: 100%;
+            transition: ease;
+        }
+
+        a:hover {
+            opacity: 100%;
+            text-shadow: 0px 0px 5px white;
+        }
+
+        li {
+            padding-bottom: 15px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box {
+            margin-top: 20px;
+            color: rgb(36, 30, 104);
+            font-size: 25px;
+            padding: 15px;
+            padding-bottom: 0px;
+            border-width: 2px;
+            border-color: white;
+            border-style: solid;
+            width: 30%;
+            background-color: rgb(176, 169, 188);
+            box-shadow: 7px 7px rgb(36, 30, 104);
+        }
+    </style>
 </head>
 <body>
-    <h1>Software for People</h1>
-    <p>
-        This is my class website.
-        <a href="Project 1 copy/index.html">Project 1 </a>
-        <br><a href="website-as.html">Website as</a>
-        <br><a href="enzo-mari-remix/index.html">Enzo Mari Remix</a>
-        <br><a href="keyboard_instrument/index.html">Keyboard Instrument</a>
-        <br><a href="Project_2/index.html">Project 2</a>
-        <br><a href="ambient.html">Ambient Website</a>
-    </p>
+    <div class="container">
+        <div class="box">
+            Projects: 
+            <ul>
+                <li><a href="HushHouse/">Hush House Digital Library</a></li>
+                <li><a href="ValorParlor/">Valor Parlor</a></li>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1dbfJPdZ9Wh1WbTweD9yl9tvzdi2C6Rxi/view?usp=drive_link">Documentation</a></li>
+                </ul>
+                <li><a href="Project3.pdf">Online Accessibility</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            Exercises:   
+            <ul>
+                <li><a href="ambient.html">Ambient Website</a></li>
+                <li><a href="website-as.html">Website as</a></li>
+                <li><a href="enzo-mari-remix/">Enzo Mari Remix</a></li>
+                <li><a href="keyboard_instrument/">Keyboard Instrument</a></li>
+                <li><a href="google-sheet-cms/">Google Sheets as CMS</a></li>
+                <li><a href="bookmarklet.html">Bookmarklet</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

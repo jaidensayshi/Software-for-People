@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cucurbit Prisoner Records 1927</title>
+</head>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png'); width: 481px";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+            audio.removeAttribute("id");
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/CucurbitPrisonerRecords1927.webp'); width: 481px">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 28px;">Cucurbit Prisoner Records 1927</span>
+            <br><br>Accounts by Governor Collers' private secretary of interventions and experiments in the last years of the Cucurbit prison, focusing particularly on prisoners he believes might have Carapace Cross lineage.
+            <br><br>Two prisoners suspected of oneiric crimes are encouraged to access their inner Carapace Cross tendencies, and develop the attributes of the Seglaz-kind ('sickle-formed pseudocrustacea'). Regrettably they lose the ability to breathe air; one dies and Collers releases the other into the sea.
+            <br><br>Collers describes how he's successfully induced an unstable Carapace-larva to develop into a greater form, using Insects and Nectars techniques in the context of considerable Moon-aspect to 'awaken what would rather remain hidden'. He hopes that similar techniques might be used to expedite the moral development of prisoners...
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
+    </div>
+</body>
+</html>

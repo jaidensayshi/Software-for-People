@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shuritic Book of Suns</title>
+</head>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png'); width: 700px";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+            audio.removeAttribute("id");
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/Shuritic_Book_of_Suns.webp'); width: 185px">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">Shuritic Book of Suns</span>
+            <br><br>A radically different text from any of the other versions of the Book of Suns, attributed to Hagar, Queen of Shur, Mother of Wolves. <i>This book houses a </i>numen<i> - a truth so powerful it can perhaps believe itself.</i>
+            <br><br>'Set down with reverence before the Intercalate, by one who understood what would come to pass…'
+            <br><br>Apocryphal chapters foretell the means by which the Sun-in-Splendour and the Forge might circumvent the impossibility of their joining, through proxies that are in some sense themselves…
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
+    </div>
+</body>
+</html>

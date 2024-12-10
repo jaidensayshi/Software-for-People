@@ -2,6 +2,10 @@
   font-family: arial;
 }
 
+body {
+  background-color: lightcyan;
+}
+
 fieldset {
   border: 1px solid black;
   margin: 0px;
@@ -26,4 +30,18 @@ li {
 
 .Timestamp {
   display: none;
+}
+
+#sheetData {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: white;
+  border-color: palevioletred;
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
+  margin: 2px;
 }

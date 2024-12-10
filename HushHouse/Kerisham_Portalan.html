@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Kerisham Portalan</title>
+</head>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png'); width: 410px; border-radius: 5%";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+            audio.removeAttribute("id");
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/TheKerishamPortolan.webp'); width: 410px">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">The Kerisham Portalan</span>
+            <br><br>A beautifully illustrated and heavily annotated 'portolan' - a nautical atlas of ports and destinations.
+            <br><br>Two pages have been gummed together. When teased apart they reveal a route to 'Ys Behind the Wave' - marked in red and gold inks with heavily underlined warnings. 'HERE THE FINAL CITY'. 'STRIKE THE HOURS.' 'LEST EARTH AND SKY BREAK OPEN…'
+            <br><br>It quickly becomes clear that many of its destinations no longer exist, or never existed in the traditional sense, but the annotations remain fascinating. The routes to Noon, the Long-sanctuary across the Western Sea, may remain viable…
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
+    </div>
+</body>
+</html>

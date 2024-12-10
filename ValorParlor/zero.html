@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css"> 
+    <link rel="stylesheet" href="valor.css"> 
+    <title>Valor Parlor</title>
+</head>
+<body>
+    <h1>Valor Parlor</h1>
+    <div class="balance">
+        <i>Current balance: </i>
+        <br><span id="balance">0</span>
+    </div>
+    <br>
+    <div class="bigContainer">
+        <span class="changeContainer">
+            <input type="number" min="0" step="1" placeholder="Enter value..." oninput="validity.valid||(value='');" id="value" name="fname">
+            <br>
+            <input type="button" name="button" value="Deposit" class="dbutton" id="deposit" onclick="updateBalance(true);">
+            <input type="button" name="button" value="Debit" class="dbutton" id="debit" onclick="updateBalance(false);">
+        </span>
+        <span id="text">Well done!</span>
+    </div>
+    <br>
+    <div class="zeroText">
+    Congratulations on breaking even! Now you can continue earning valor and be a contributing member of society.
+    <br><br>
+    Once you have valor to display you can try on some cool new abacus styles. 
+    <br><br>
+    Be sure not to make any poor choices that might put you below zero again!
+    <br>
+    <div id="trust"><img src="images/trust2.png" width="50%"></div>
+    </div>
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <img src="images/mica.gif" class="mica">
+    <script src="zero.js"></script>
+</body>
+</html>

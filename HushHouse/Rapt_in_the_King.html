@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rapt in the King</title>
+</head>
+<body class="book-body">
+    <script>
+        function changeImage() { 
+            document.getElementById("closedbook").style = "background-image: url('images/Chione_at_Abydos.png')";
+            document.getElementById("booktext").style = "opacity: 100%";
+            var audio = document.getElementById("audio");  
+            audio.play();
+            audio.removeAttribute("id");
+        }
+    </script>
+    <audio id="audio" src="images/pageturn.mp3"></audio> 
+    <div class="cover-container" id="closedbook" onclick="changeImage()" style="background-image: url('images/Rapt_in_the_King.webp')">
+        <div class="book-text" id="booktext">
+            <br><span style="font-size: 35px;">Rapt in the King</span>
+            <br><br>Detailed accounts of secret bachanals and ecstatic dances observed in necropolises and graveyards in Southern Europe, in Egypt and in Anatolia. The author is a self-confessed ghoul, an eater of buried flesh: he claims to have witnessed the dances while at his feasting.
+            <br><br>The dances draw from the traditions of the Mysteries, of the cults of Isis and of Cybele, but include both symbolic and literal flayings, and the human heart is always central in the rites. The author punctuates his accounts with queasily sensuous descriptions of his own interrupted feasts.
+            <br><br>"At these greater Feasts a Black Pig is always crowned as King before its Slaying. On this Occasion, its Heart was weighed in the Balance against a Knot of Feathers, and its Skin became a Cape for the Officiant. Its Flesh was left for the Crows, but I must confess my Interest was not in its Carcass but in the Perfumed Flesh of the Milliner laid fresh in the Earth."
+            <span class="page-number">1</span>
+            <span class="left-text"><a href="index.html">Return to library</a></span>
+        </div> 
+    </div>
+</body>
+</html>
